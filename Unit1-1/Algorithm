@@ -1,0 +1,31 @@
+DECLARE variable floorWidth
+DECLARE variable floorLength
+DECLARE variable numberOfTilesX
+DECLARE variable numberOfTilesY
+DECLARE variable squareSize
+DECLARE FUNCTION CalculateTile
+	A mod B = C
+	A = B
+	B = C
+	OUTPUT B when C = 0
+floorWidth = 345
+floorLength = 150
+squareSize = CalculateTile (345, 150)
+numberOfTilesX = floorWidth / squareSize
+numberOfTilesY = floorLength / squareSize
+
+WHILE tilesX < numberOfTilesX
+	startingx = tileX * squareSize
+	drawsquare (squareSize)
+	coloursquare(white)
+	moveto startingx + squareSize
+ENDWHILE
+
+WHILE tilesY < numberOfTilesY
+	startingy = tileY * squareSize
+	drawsquare (squareSize)
+	moveto startingy + squareSize
+ENDWHILE
+
+
+
